@@ -1,0 +1,64 @@
+@use '../../../../core/styles/colors' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height: 100%;
+
+    width: 300px;
+    padding: 30px;
+    //border: 1px solid black;
+    border-radius: 15px;
+
+
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .option-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .option-header{
+                font-size: 1.2em;
+                font-weight: bold;
+                color: $primary-color;
+
+
+            }
+
+            .options-container {
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                gap: 3px;
+
+                .option {
+                    font-size: 1em;
+                    font-weight: 600;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .sair {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    .create-button {
+        cursor: pointer;
+    }
+}

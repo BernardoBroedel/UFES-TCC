@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="select">
+        <mat-form-field style='width: 200px'>
+            <mat-label>Buscar reabilitador por nome</mat-label>
+            <input matInput type="text" [(ngModel)]="search" />
+        </mat-form-field>
+    </div>
+
+    <div class="container__categorias">
+        <div></div>
+        <div>Nome</div>
+        <div class='text-center'>Matricula</div>
+        <div class='text-center'>Semestre</div>
+    </div>
+
+    <ng-container *ngFor="let reabilitador of reabilitadores | filterArray: selectedValue:search">
+        <div class="container__pacientes" [routerLink]="['/sistema/supervisor/paciente', reabilitador.id]">
+            <ng-container *ngIf='reabilitador.imagem; else semImagem'>
+                <img [src]="reabilitador.imagem" alt="user" class="image">
+            </ng-container>
+            <ng-template #semImagem>
+                <img src="assets/user.jpeg" alt="user" class="image">
+            </ng-template>
+            <div>{{ reabilitador.nome }}</div>
+            <div class='text-center'>{{ reabilitador.matricula }}</div>
+            <div class='text-center'>{{ reabilitador.semestre | date:'dd/MM/yyyy' }}</div>
+        </div>
+    </ng-container>
+</div>

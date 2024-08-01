@@ -1,0 +1,134 @@
+<form [formGroup]="pacienteForm" (ngSubmit)="onSubmit()" class="container">
+    <div class="container__sobre">
+        <div class="container__sobre__col">
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Nome"
+                    type="text"
+                    id="nome"
+                    formControlName="nome"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Data de Nascimento</mat-label>
+                <input
+                    matInput
+                    [matDatepicker]="dataPicker"
+                    formControlName="nascimento"
+                />
+                <mat-datepicker-toggle
+                    matSuffix
+                    [for]="dataPicker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #dataPicker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="CPF"
+                    type="text"
+                    id="cpf"
+                    formControlName="cpf"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Sobre Orelha Esquerda"
+                    type="text"
+                    id="sobre_orelha_esquerda"
+                    formControlName="sobre_orelha_direita"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Marca Orelha Esquerda"
+                    type="text"
+                    id="marca_orelha_esquerda"
+                    formControlName="marca_orelha_direita"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Modelo Orelha Esquerda"
+                    type="text"
+                    id="modelo_orelha_esquerda"
+                    formControlName="modelo_orelha_direita"
+                />
+            </mat-form-field>
+
+        </div>
+
+        <div class="container__sobre__col">
+            <mat-form-field>
+                <mat-label>Selecione uma opção</mat-label>
+                <mat-select formControlName="edp">
+                    <mat-option [value]="edpEnum.EDP1">EDP1</mat-option>
+                    <mat-option [value]="edpEnum.EDP2">EDP2</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Número do Prontuário"
+                    type="text"
+                    id="prontuario"
+                    formControlName="prontuario"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="RG"
+                    type="text"
+                    id="rg"
+                    formControlName="rg"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Sobre Orelha Direita"
+                    type="text"
+                    id="sobre_orelha_direita"
+                    formControlName="sobre_orelha_direita"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Marca Orelha Direita"
+                    type="text"
+                    id="marca_orelha_direita"
+                    formControlName="marca_orelha_direita"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Modelo Orelha Direita"
+                    type="text"
+                    id="modelo_orelha_direita"
+                    formControlName="modelo_orelha_direita"
+                />
+            </mat-form-field>
+        </div>
+    </div>
+
+    <button filled-button type="submit" [disabled]="pacienteForm.invalid">
+        Salvar
+    </button>
+</form>

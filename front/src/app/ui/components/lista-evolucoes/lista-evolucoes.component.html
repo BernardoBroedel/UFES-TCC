@@ -1,0 +1,14 @@
+<div class="container">
+    <ul class="rehabilitator-list">
+        <li *ngFor="let sessao of sessoes" class="rehabilitator-item">
+            <span>{{ sessao.nome }}</span>
+            <span>{{ sessao.data}}</span>
+            <span>{{ sessao.horario}}</span>
+            <div>
+                <button mat-icon-button style="color: #356072">
+                    <mat-icon>remove_red_eye</mat-icon>
+                </button>
+            </div>
+        </li>
+    </ul>
+</div>

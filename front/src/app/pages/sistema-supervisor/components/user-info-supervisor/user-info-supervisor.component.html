@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="user-info">
+        <span class="name" [routerLink]='["/sistema/supervisor/usuario"]'>{{userInfo?.nome}}</span>
+        <span class="role">SUPERVISOR</span>
+    </div>
+    <div>
+        <ng-container *ngIf='userInfo?.imagem; else semImagem'>
+            <img [src]="userInfo?.imagem" alt="user" class="image">
+        </ng-container>
+        <ng-template #semImagem>
+            <img src="assets/user.jpeg" alt="user" class="image">
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<app-modal>
+    <div class="container">
+        <h1>Editar imagem paciente</h1>
+        <input
+            type="file"
+            style="margin-bottom: 10px"
+            (change)="onFileSelected($event)"
+        />
+
+        <button filled-button type="submit" style='width: 100px' (click)='onSubmit()'>
+            Salvar
+        </button>
+    </div>
+</app-modal>

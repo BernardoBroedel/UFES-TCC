@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="options">
+        <div class="option-group">
+            <span class="option-header create-button" [routerLink]='"inicio"'>Início</span>
+        </div>
+
+        <div class="option-group">
+            <span class="option-header">EDP1</span>
+            <div class="options-container">
+                <span [routerLink]='"edp1/pacientes"' class="option create-button">Pacientes</span>
+                <span [routerLink]='"edp1/reabilitadores"' class="option create-button">Reabilitadores</span>
+                <span [routerLink]='"edp1/planejamentos"' class="option create-button">Planejamentos</span>
+                <span [routerLink]='"edp1/evolucoes"' class="option create-button">Evoluções</span>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <span class="option-header">EDP2</span>
+            <div class="options-container">
+                <span [routerLink]='"edp2/pacientes"' class="option create-button">Pacientes</span>
+                <span [routerLink]='"edp2/reabilitadores"' class="option create-button">Reabilitadores</span>
+                <span [routerLink]='"edp2/planejamentos"' class="option create-button">Planejamentos</span>
+                <span [routerLink]='"edp2/evolucoes"' class="option create-button">Evoluções</span>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <span class="option-header">Novo Cadastro</span>
+            <div class="options-container">
+                <span class="option create-button" (click)="cadastrarSupervisor()">Supervisor</span>
+                <span class="option create-button" (click)="cadastrarReabilitador()">Reabilitador</span>
+                <span class="option create-button" (click)="cadastrarPaciente()">Paciente</span>
+            </div>
+        </div>
+
+    </div>
+
+    <span (click)="logout()" class="sair">Sair</span>
+</div>

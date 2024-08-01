@@ -1,0 +1,37 @@
+.container {
+
+
+    .paciente {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &__imagem {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+        }
+    }
+}
+
+::ng-deep .custom-toggle .mat-slide-toggle-thumb {
+    background-color: #4caf50; /* Cor do "polegar" do toggle */
+}
+
+::ng-deep .custom-toggle .mat-slide-toggle-bar {
+    background-color: #c8e6c9; /* Cor da barra quando desligado */
+}
+
+::ng-deep .custom-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #66bb6a; /* Cor da barra quando ligado */
+}
+
+::ng-deep .custom-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #388e3c; /* Cor do "polegar" do toggle quando ligado */
+}

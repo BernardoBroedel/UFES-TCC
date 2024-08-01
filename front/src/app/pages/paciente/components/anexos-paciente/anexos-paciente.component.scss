@@ -1,0 +1,57 @@
+.container-anexos {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+
+    .anexo {
+        display: flex;
+        width: 500px;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__adicionar {
+        display: flex;
+        max-height: 40px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+.rehabilitator-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+
+    .rehabilitator-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        margin-bottom: 4px;
+        background: #f5f5f5;
+        border-radius: 4px;
+        transition: background 0.3s;
+
+        &:hover {
+            background: #e0e0e0;
+        }
+    }
+}
+
+.rehabilitator-select {
+    width: 100%;
+    margin-bottom: 16px;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="container__title">
+        {{ 'Cadastrar Supervisor' | uppercase }}
+    </h1>
+    <form
+        [formGroup]="createSupervisorForm"
+        (ngSubmit)="createSupervisor()"
+        class="login-form"
+    >
+        <mat-form-field>
+            <mat-label>Username do Supervisor</mat-label>
+            <input matInput formControlName="username" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Senha</mat-label>
+            <input matInput formControlName="password" />
+        </mat-form-field>
+        <button
+            mat-raised-button
+            style="background-color: #304166"
+            type="submit"
+        >
+            Cadastrar
+        </button>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <img src="assets/logo-sara.png" alt="logo" class="image">
+        </div>
+        <div class="menu">
+            <app-user-info-reabilitador></app-user-info-reabilitador>
+        </div>
+    </div>
+
+    <div class="content">
+        <app-sidebar-reabilitador></app-sidebar-reabilitador>
+        <div class="main">
+            <h1 class="title">{{ nomePagina | uppercase }}</h1>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

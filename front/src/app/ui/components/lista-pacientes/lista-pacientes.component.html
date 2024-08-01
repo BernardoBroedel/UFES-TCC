@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="select">
+        <mat-form-field class="example-form-field">
+            <mat-label>Buscar paciente por nome</mat-label>
+            <input matInput type="text" [(ngModel)]="search" />
+        </mat-form-field>
+    </div>
+
+    <div class="container__categorias">
+        <div></div>
+        <div>Nome</div>
+        <div class='text-center'>Idade</div>
+        <div class='text-center'>Data de nascimento</div>
+    </div>
+
+    <ng-container *ngFor="let paciente of pacientes | filterArray: selectedValue:search">
+        <div class="container__pacientes" [routerLink]="['/sistema/supervisor/paciente', paciente.id]">
+            <ng-container *ngIf='paciente.imagem; else semImagem'>
+                <img [src]="paciente.imagem" alt="user" class="image">
+            </ng-container>
+            <ng-template #semImagem>
+                <img src="assets/user.jpeg" alt="user" class="image">
+            </ng-template>
+            <div>{{ paciente.nome }}</div>
+            <div class='text-center'>{{ paciente.idade }}</div>
+            <div class='text-center'>{{ paciente.dataNascimento | date:'dd/MM/yyyy' }}</div>
+        </div>
+    </ng-container>
+</div>

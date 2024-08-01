@@ -1,0 +1,61 @@
+<app-modal>
+    <div class="container">
+        <span class="title">Cadastro Reabilitador</span>
+
+        <form [formGroup]="novoReabilitador" (ngSubmit)="onSubmit()" class="form-container">
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Nome"
+                    type="text"
+                    id="name"
+                    formControlName="name"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Senha"
+                    type="text"
+                    id="password"
+                    formControlName="password"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Matricula"
+                    type="text"
+                    id="matricula"
+                    formControlName="matricula"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Semestre"
+                    type="text"
+                    id="semestre"
+                    formControlName="semestre"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Selecione uma opção</mat-label>
+                <mat-select formControlName="edp">
+                    <mat-option [value]="edpEnum.EDP1">EDP1</mat-option>
+                    <mat-option [value]="edpEnum.EDP2">EDP2</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <button filled-button type="submit" [disabled]="novoReabilitador.invalid">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+
+</app-modal>

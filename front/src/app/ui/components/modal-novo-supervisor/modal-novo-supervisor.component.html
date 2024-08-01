@@ -1,0 +1,43 @@
+<app-modal>
+    <div class="container">
+        <span class="title">Cadastro Supervisor</span>
+
+        <form [formGroup]="novoSupervisor" (ngSubmit)="onSubmit()" class="form-container">
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Nome"
+                    type="text"
+                    id="name"
+                    formControlName="name"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Nome de Usuário"
+                    type="text"
+                    id="username"
+                    formControlName="username"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Senha"
+                    type="text"
+                    id="password"
+                    formControlName="password"
+                />
+            </mat-form-field>
+
+
+            <button filled-button type="submit" [disabled]="novoSupervisor.invalid">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+
+</app-modal>

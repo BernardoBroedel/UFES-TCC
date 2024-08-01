@@ -1,0 +1,27 @@
+<div class="container">
+    <ul class="rehabilitator-list">
+        <li *ngFor="let anexo of anexos" class="rehabilitator-item">
+            <span>{{ anexo.nome }}</span>
+            <div>
+                <button mat-icon-button style="color: darkgreen">
+                    <mat-icon>download</mat-icon>
+                </button>
+                <button mat-icon-button color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </li>
+    </ul>
+
+    <div class='container__adicionar'>
+        <mat-form-field>
+            <mat-label>Identificador Anexo</mat-label>
+            <input matInput/>
+        </mat-form-field>
+        <input
+            type="file"
+        />
+        <button filled-button type="submit">Adicionar anexo</button>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <ul class="rehabilitator-list">
+        <li *ngFor="let sessao of sessoes" class="rehabilitator-item">
+            <span (click)='abrirModalSessao()'>{{ 'Sessão ' + sessao.id }}</span>
+            <span>{{ sessao.data}}</span>
+            <span>{{ sessao.horario}}</span>
+            <div>
+                <button mat-icon-button style="color: #356072">
+                    <mat-icon>remove_red_eye</mat-icon>
+                </button>
+                <button mat-icon-button color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </li>
+    </ul>
+
+    <div class='container__adicionar'>
+        <button filled-button type="submit" (click)='abrirModalNovaSessao()'>Nova Sessão</button>
+    </div>
+
+</div>

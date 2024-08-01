@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__categorias {
+        display: grid;
+        grid-template-columns: 150px 1fr 100px 200px;
+    }
+
+    &__pacientes {
+        display: grid;
+        grid-template-columns: 150px 1fr 100px 200px;
+        align-items: center;
+        cursor: pointer;
+
+        .image {
+            width: 100px;
+            border-radius: 50%;
+        }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+}

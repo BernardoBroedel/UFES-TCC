@@ -1,0 +1,213 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    all: unset;
+}
+
+body {
+    //background-color: white;
+    //background-color: #c9d6ff;
+    //background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    //background: linear-gradient(to right, #e2e2e2, #4682B4);
+    background: linear-gradient(to right, #e2e2e2, #356072);
+}
+
+/* Estilização da barra de rolagem do Chrome */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+    position: absolute;
+    right: 15px; /* Posicionamento de 15 pixels para a direita */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo da barra de rolagem */
+    border-radius: 8px; /* Raio de borda arredondado */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do polegar (a alça da barra de rolagem) */
+    border-radius: 8px; /* Raio de borda arredondado */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do polegar ao passar o mouse sobre ele */
+}
+
+/* Estilização da barra de rolagem do Mozilla */
+/* A barra de rolagem do Mozilla usa um pseudo-elemento */
+/* então precisamos estilizar o pseudo-elemento separadamente */
+
+/* Cor de fundo da barra de rolagem */
+html {
+    scrollbar-color: #f1f1f1 #888;
+    scrollbar-width: thin;
+}
+
+//ANGULAR MATERIAL
+
+.custom-mat-button {
+    background-color: #304166;
+    color: white;
+    /* Outros estilos personalizados aqui */
+
+    &:hover {
+        background-color: #699cfc;
+    }
+}
+
+.mat-expansion-panel-header {
+    background-color: #304166 !important;
+}
+
+.mat-expansion-panel-body {
+    background-color: #304166 !important;
+}
+
+.mat-expansion-panel-header-title {
+    color: white;
+}
+
+.mat-expansion-panel-header-description {
+    color: white;
+}
+
+.alert-snackbar {
+    background-color: white;
+    color: #356072;
+    font-weight: 500;
+
+    .mat-simple-snackbar-action {
+        color: #356072;
+    }
+}

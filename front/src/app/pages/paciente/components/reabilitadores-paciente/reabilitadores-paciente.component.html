@@ -1,0 +1,53 @@
+<!--<ul>-->
+<!--    <li *ngFor="let reabilitador of patiente?.reabilitadores">-->
+<!--        {{ reabilitador.name }}-->
+<!--        <button (click)="removeRehabilitator(reabilitador.id)">Remove</button>-->
+<!--    </li>-->
+<!--</ul>-->
+<!--<select #rehabilitatorId>-->
+<!--    <option *ngFor="let reabilitador of availableRehabilitators" [value]="reabilitador.id">-->
+<!--        {{ reabilitador.name }}-->
+<!--    </option>-->
+<!--</select>-->
+<!--<button filled-button (click)="addRehabilitator(rehabilitatorId.value)">-->
+<!--    Adicionar reabilitador-->
+<!--</button>-->
+
+<div class="container">
+    <ul class="rehabilitator-list">
+        <li *ngFor="let reabilitador of patiente?.reabilitadores" class="rehabilitator-item">
+            {{ reabilitador.name }}
+            <button mat-icon-button color="warn" (click)="removeRehabilitator(reabilitador.id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </li>
+    </ul>
+
+    <div class='container__adicionar'>
+        <mat-form-field appearance="fill" class="rehabilitator-select" style='max-width: 500px; margin-bottom: 0'>
+            <mat-label>Selecione um reabilitador</mat-label>
+            <mat-select #rehabilitatorId>
+                <mat-option *ngFor="let reabilitador of availableRehabilitators" [value]="reabilitador.id">
+                    {{ reabilitador.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button filled-button type="submit" (click)="addRehabilitator(rehabilitatorId.value)">
+            Adicionar reabilitador
+        </button>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

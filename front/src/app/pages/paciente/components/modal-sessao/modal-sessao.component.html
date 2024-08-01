@@ -1,0 +1,97 @@
+<app-modal>
+    <div class="container">
+        <div class="container__header">
+            <div class="informacoes">
+                <span>Sessão 4</span>
+                <span>Paciente: Lucas Ferreira</span>
+                <span>Data: 03/07/2024</span>
+                <span>Horário: 09:00</span>
+            </div>
+<!--            <mat-icon style="color: #9e9e9e" (click)='realizarVisto()'>hourglass_empty</mat-icon>-->
+            <mat-icon style="color: #4CAF50;">done</mat-icon>
+        </div>
+
+        <div class="barra-horizontal"></div>
+
+        <div class="container__body">
+            <div class="conteudo">
+                <mat-tab-group>
+                    <mat-tab label="Plano Terapêutico">
+                        <div class="box">
+                            <textarea
+                                class="desc"
+                                placeholder="Descreva o Plano Terapêutico para a sessão"
+                            ></textarea>
+                            <!--                            <button filled-button style='width: 100px'>Salvar</button>-->
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab label="Evolução">
+                        <div class="box">
+                            <textarea
+                                class="desc"
+                                placeholder="Descreva as Evoluções obtidas durante a sessão"
+                            ></textarea>
+                            <!--                            <button filled-button style='width: 100px'>Salvar</button>-->
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab label="Observação">
+                        <div class="box">
+                            <textarea
+                                class="desc"
+                                placeholder="Descreva as observações importantes para os reabilitadores"
+                            ></textarea>
+<!--                            <button filled-button style="width: 100px">-->
+<!--                                Salvar-->
+<!--                            </button>-->
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+
+            <div class="barra-vertical"></div>
+
+            <div class="lateral">
+                <div class="lateral__item">
+                    <div class="lateral__item__title">
+                        <span>Mídias</span>
+                        <mat-icon>add_circle</mat-icon>
+                    </div>
+                    <div class="lateral__item__anexos">
+                        <div class="lateral__item__anexos__grupo">
+                            <span>Exames</span>
+                            <div class="lateral__item__anexos__icones">
+                                <mat-icon style="color: #356072"
+                                    >remove_red_eye</mat-icon
+                                >
+                                <mat-icon style="color: #b81414"
+                                    >delete</mat-icon
+                                >
+                            </div>
+                        </div>
+                        <div class="lateral__item__anexos__grupo">
+                            <span>Foto orelha esquerda</span>
+                            <div class="lateral__item__anexos__icones">
+                                <mat-icon style="color: #356072"
+                                    >remove_red_eye</mat-icon
+                                >
+                                <mat-icon style="color: #b81414"
+                                    >delete</mat-icon
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lateral__item">
+                    <div class="lateral__item__title">
+                        <span>Protocolos</span>
+                        <mat-icon>add_circle</mat-icon>
+                    </div>
+                    <div class="lateral__item__anexos"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-modal>

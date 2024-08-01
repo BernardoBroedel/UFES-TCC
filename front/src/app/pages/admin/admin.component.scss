@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+
+    &__title{
+        font: 700 32px Arial;
+        color: #304166;
+    }
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}

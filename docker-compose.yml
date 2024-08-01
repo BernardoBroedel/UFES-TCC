@@ -1,0 +1,38 @@
+version: '1.0'
+
+services:
+    postgres:
+        container_name: postgresql_container
+        image: postgres:latest
+        ports:
+            - "5432:5432"
+        hostname: 'docker'
+        environment:
+            POSTGRES_PASSWORD: 'bernardo'
+            POSTGRES_USER: 'postgres'
+            POSTGRES_DB: 'demo'
+        volumes:
+            - ./dados:/var/lib/postgresql/data
+
+    frontend:
+        container_name: front_container
+        build: ./front
+        ports:
+            - "4200:4200"
+        depends_on:
+            - postgres
+        volumes:
+            - ./front:/front
+        command: ng serve --host 0.0.0.0 --disable-host-check --port 4200 --poll=2000
+
+    backend:
+        container_name: back_container
+        build: ./back
+        ports:
+            - "3000:3000"
+        depends_on:
+            - frontend
+        volumes:
+            - ./back:/back
+        command: sh -c "npm run migration:run && npm run build"
+

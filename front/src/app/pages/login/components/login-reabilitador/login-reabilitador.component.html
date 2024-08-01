@@ -1,0 +1,30 @@
+<div>
+    <form class="form" (ngSubmit)="login()" [formGroup]="loginForm">
+        <mat-form-field>
+            <input
+                matInput
+                placeholder="Matricula"
+                type="text"
+                id="username"
+                formControlName="username"
+            />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input
+                matInput
+                placeholder="Senha"
+                [type]="hide ? 'password' : 'text'"
+                id="password"
+                formControlName="password"
+            />
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <button filled-button type="submit" [disabled]="loginForm.invalid">
+            Entrar
+        </button>
+    </form>
+</div>

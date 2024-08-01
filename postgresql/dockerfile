@@ -1,0 +1,4 @@
+FROM postgres:latest
+
+# init.sql runs each time the postgres container is started.
+COPY init.sql /docker-entrypoint-initdb.d

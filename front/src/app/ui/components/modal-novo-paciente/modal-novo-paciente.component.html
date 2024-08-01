@@ -1,0 +1,47 @@
+<app-modal>
+    <div class="container">
+        <span class="title">Cadastro Paciente</span>
+
+        <form [formGroup]="novoPaciente" (ngSubmit)="onSubmit()" class="form-container">
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Nome"
+                    type="text"
+                    id="name"
+                    formControlName="name"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Data de Nascimento</mat-label>
+                <input matInput [matDatepicker]="dataPicker" formControlName="dataNascimento">
+                <mat-datepicker-toggle matSuffix [for]="dataPicker"></mat-datepicker-toggle>
+                <mat-datepicker #dataPicker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Número do Prontuário"
+                    type="text"
+                    id="numeroProntuario"
+                    formControlName="numeroProntuario"
+                />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Selecione uma opção</mat-label>
+                <mat-select formControlName="edp">
+                    <mat-option [value]="edpEnum.EDP1">EDP1</mat-option>
+                    <mat-option [value]="edpEnum.EDP2">EDP2</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button filled-button type="submit" [disabled]="novoPaciente.invalid">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+
+</app-modal>

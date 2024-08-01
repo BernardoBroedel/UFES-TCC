@@ -1,0 +1,29 @@
+<app-modal>
+    <div class="container">
+        <span class="title">Cadastro Sessão</span>
+        <form class="form-container">
+
+            <mat-form-field>
+                <mat-label>Data da sessão *</mat-label>
+                <input matInput [matDatepicker]="dataPicker">
+                <mat-datepicker-toggle matSuffix [for]="dataPicker"></mat-datepicker-toggle>
+                <mat-datepicker #dataPicker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                    matInput
+                    placeholder="Horário da sessão *"
+                    type="text"
+                    id="numeroProntuario"
+                />
+            </mat-form-field>
+
+            <button filled-button type="submit" >
+                Cadastrar
+            </button>
+        </form>
+
+    </div>
+
+</app-modal>

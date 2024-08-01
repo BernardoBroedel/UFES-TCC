@@ -1,0 +1,48 @@
+<div class="container">
+    <div class='paciente'>
+        <div class='paciente__header'>
+            <ng-container *ngIf='paciente?.imagem; else semImagem'>
+                <img [src]="paciente?.imagem" alt="user" class='paciente__imagem' (click)='abrirModalImgemPaciente()'>
+            </ng-container>
+            <ng-template #semImagem>
+                <img src="assets/user.jpeg" alt="user" class='paciente__imagem'  (click)='abrirModalImgemPaciente()'>
+            </ng-template>
+            <span> {{ paciente?.nome }}</span>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div>
+        <mat-tab-group>
+            <mat-tab label="Sobre">
+                <app-sobre-paciente
+                    [pacienteId]="pacienteId"
+                ></app-sobre-paciente>
+            </mat-tab>
+
+            <mat-tab label="Reabilitadores">
+                <app-reabilitadores-paciente
+                    [pacienteId]="pacienteId"
+                ></app-reabilitadores-paciente>
+            </mat-tab>
+
+            <mat-tab label="Sessões">
+                <app-sessoes-paciente
+                    [pacienteId]="pacienteId"
+                ></app-sessoes-paciente>
+            </mat-tab>
+
+            <mat-tab label="Anexos">
+                <app-anexos-paciente
+                    [pacienteId]="pacienteId"
+                ></app-anexos-paciente>
+            </mat-tab>
+
+<!--            <mat-tab label="Histórico">-->
+<!--                <app-historico-paciente-->
+<!--                    [pacienteId]="pacienteId"-->
+<!--                ></app-historico-paciente>-->
+<!--            </mat-tab>-->
+        </mat-tab-group>
+    </div>
+</div>
